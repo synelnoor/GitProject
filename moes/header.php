@@ -12,7 +12,7 @@
 				<div class="col-lg-3">
 				<div id="search">
 					<!--search-->
-					<?php echo "coba lagi"; ?>
+					
  					<form id="quick-search" method="post" action="?tampil=pencarian">
       					<fieldset class="search">
         					<label for="qsearch"></label>
