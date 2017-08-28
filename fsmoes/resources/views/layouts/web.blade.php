@@ -23,8 +23,10 @@
     margin-top: 10px;
     }
 /*haed*/
+/*change navbar*/
     .navbar-inverse {
-    background-color: #ff8604;
+    /*background-color: #ff8604;*/
+    background-color: #fff;
     font-size:14px;
     color: #000;
 
@@ -33,10 +35,17 @@
     .navbar-brand{
         background-color: #fff;
     }
+
     .navbar-inverse .navbar-nav>li>a {
-    color: #fff;
+    color: #000;
+    background-color: #fff;
     }
-    
+    /*change navbar when hover*/
+    .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    background-color: #ff8604;
+    color: #fff;
+}
+ /*change navbar dropdown when hover*/   
     .navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
     color: #000;
     background-color:  #FFFFF0;
