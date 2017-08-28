@@ -18,10 +18,22 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+Route::get('/dashboard', 'HomeController@index');
+
+
+Route::group(['prefix' => 'artikel', 'middleware' => 'auth'], function() {
+	Route::get('/','artikelController@index');
+    Route::get('/add','artikelController@create');
+	Route::post('/add','artikelController@store');
+	// Route::get('/edit/{id}','artikelController@show');
+	// Route::post('/edit','artikelController@update');
+	// Route::get('/delete/{id}','artikelController@destroy');
+});
 
 
 Route::group(['middleware'=>'Auth'],function(){
+
+
 	
 
 });

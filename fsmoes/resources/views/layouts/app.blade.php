@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <script src="{{ asset('js/tinymce/js/tinymce/tinymce.min.js') }}"></script>
 </head>
 <body>
     <div id="app">
@@ -29,14 +30,16 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
+                        <!--{{ config('app.name', 'fisip Prof.dr.Moestopo') }}-->
+                        fisip Prof.dr.Moestopo
                     </a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        &nbsp;
+                        <li><a href="{{ url('/dashboard') }}">Home</a></li>
+                        <li><a href="{{ url('/artikel') }}">Artikel</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -76,5 +79,6 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/tinymcejs/tinymce/tinymce.min.js') }}"></script>
 </body>
 </html>
