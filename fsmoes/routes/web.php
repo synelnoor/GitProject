@@ -31,9 +31,15 @@ Route::group(['prefix' => 'artikel', 'middleware' => 'auth'], function() {
 });
 
 
+
 Route::group(['middleware'=>'Auth'],function(){
 
 
 	
 
+
+	
+
 });
+
+

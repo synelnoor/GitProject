@@ -31,8 +31,9 @@
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/') }}">
                         <!--{{ config('app.name', 'fisip Prof.dr.Moestopo') }}-->
-                        fisip Prof.dr.Moestopo
+                        <img src="{{ asset('/img/logo.png')}}" style="max-width:100px; margin-top: -9px; height: 40px;">
                     </a>
+                     
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
