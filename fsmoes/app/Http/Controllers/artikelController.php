@@ -28,15 +28,19 @@ class artikelController extends Controller
     public function store(Request $request){
 
     	$this->validasi($request);
+        $filename= $request->file('img')->getClientOriginalName();
+        $destination = base_path().'/public/upimg';
 
     	$artikel = new Artikel();
     	$artikel->id=$request->get('id');
-    	$artikel->judul= $request->get('judul');
-    	$artikel->img=$request->file('img')->move("img/",$filename);
-    	//$artikel->img=$filename;
+    	$artikel->judul=$request->get('judul');
+    	$artikel->img=$request->file('img')->move($destination,$filename);
     	$artikel->isi=$request->get('isi');
     	$artikel->date=$request->get('date');
     	$artikel->save();
+
+         
+
 
     	return view('artikel.create',['message'=>'Sukses simpan Data']);
     }
@@ -46,12 +50,22 @@ class artikelController extends Controller
             'id' => 'required',
             'judul' => 'required',
             'img' => 'required',
-            'isi' => 'required',
-            'date'=>'requred'
+            'isi' => 'required'
+            
             
         ]);
     }
     
+
+    public function show(){
+
+    }
+    public function update(){
+
+    }
+    public function destroy(){
+        
+    }
 
 
 }
