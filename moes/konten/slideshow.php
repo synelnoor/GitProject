@@ -16,9 +16,9 @@
 <!--indikator-->
   <ol class="carousel-indicators">
   <?php
-    $artikel = mysql_query("select * from artikel order by id_artikel desc limit 4");
+    $artikel = mysqli_query("select * from artikel order by id_artikel desc limit 4");
     $no=0;
-    while($data=mysql_fetch_array($artikel)){
+    while($data=mysqli_fetch_array($artikel)){
   ?>
     <li data-target="#mycarousel" data-slide-to="<?php echo $no; ?>"
       <?php if($no == 0) echo ' class="active"'; ?>
@@ -31,9 +31,9 @@
    <!--wrapper untuk slide-->
   <div class="carousel-inner">
   <?php
-    $artikel = mysql_query("select * from artikel order by id_artikel desc limit 4");
+    $artikel = mysqli_query("select * from artikel order by id_artikel desc limit 4");
     $no=0;
-    while($data=mysql_fetch_array($artikel)){
+    while($data=mysqli_fetch_array($artikel)){
       $isi = substr($data['isi'],0,300);
       $isi = substr($data['isi'],0,strrpos($isi," "));
   ?>
