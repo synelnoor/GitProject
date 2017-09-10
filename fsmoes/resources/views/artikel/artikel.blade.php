@@ -13,20 +13,29 @@
                             <tr>
                                 <th>No</th>
                                 <th>Judul</th>
+                                <th>Gambar</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
 
                         <tbody>
+                                
                             @foreach($data as $item)
+
+                             
+                            
+                            
                             <tr>
-                                <td>{{ $item->id }}</td>
+                                <td>{{ $item->id}}</td>
                                 <td>{{ $item->judul }}</td>
+                                <td><img src="{{ url('upimg') }}/{{ $item->img }}" class="img-responsive" style="height: 50px; width: 80px;"></td>
                                 <td>
                                     <a href="{{ url('/artikel/edit/'.$item->id) }}">Edit</a>|
                                     <a href="{{ url('/artikel/delete/'.$item->id) }}">Delete</a>
                                 </td>
                             </tr>
+
+                           
                             @endforeach
                         </tbody>
                     </table>

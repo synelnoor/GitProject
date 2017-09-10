@@ -12,7 +12,12 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <script src="{{ asset('js/tinymce/js/tinymce/tinymce.min.js') }}"></script>
+    
+    <script src="{{ asset('/plugin/tinymce/jquery.tinymce.min.js') }}"></script>
+     <script src="{{ asset('/plugin/tinymce/tinymce.min.js') }}"></script>
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+
 </head>
 <body>
     <div id="app">
@@ -41,6 +46,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="{{ url('/dashboard') }}">Home</a></li>
                         <li><a href="{{ url('/artikel') }}">Artikel</a></li>
+                        <li><a href="{{ url('/dosen') }}">Dosen</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -80,6 +86,11 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/tinymcejs/tinymce/tinymce.min.js') }}"></script>
+    <script src="{{ asset('/plugin/tinymce/tinymce.min.js') }}"></script>
+    <script type="text/javascript">
+            tinymce.init({         
+                selector: "textarea#article"
+            });
+    </script>
 </body>
 </html>

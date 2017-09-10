@@ -24,6 +24,36 @@
     }
 /*haed*/
 /*change navbar*/
+/*fontH1,2,3*/
+h1 {
+    font: bold 14px  'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', Verdana, Sans-Serif;
+    margin-bottom: 15px;
+    color: #ff8604;
+    
+}
+ h2 {
+    font: bold 15px  'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', Verdana, Sans-Serif;
+    margin-bottom: 15px;
+    color: #ff8604;
+    
+}
+ h3 {
+    font: bold 18px  'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', Verdana, Sans-Serif;
+    margin-bottom: 15px;
+    color: #ff8604;
+    border-bottom: 1px solid #ff8604;
+}
+h4 {
+    font: bold 24px  'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', Verdana, Sans-Serif;
+    margin-bottom: 15px;
+    color: #ff8604;
+    
+}
+p{
+    font:  14px  'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', Verdana, Sans-Serif;
+}
+
+/*fontH1,2,3*/
     .navbar-inverse {
     /*background-color: #ff8604;*/
     background-color: #fff;

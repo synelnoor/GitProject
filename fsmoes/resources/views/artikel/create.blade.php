@@ -11,7 +11,7 @@
                     @if(isset($message))
                     <div class="alert alert-success">{{ $message }}</div>
                     @endif
-                    <form class="form-horizontal" action="{{ url('/artikel/add') }}" method="POST">
+                    <form class="form-horizontal" action="{{ url('/artikel/add') }}" method="POST" enctype="multipart/form-data">
                         {{ csrf_field() }}
                        
 
@@ -19,7 +19,7 @@
                             <label for="judul" class="col-md-4 control-label">Judul</label>
 
                             <div class="col-md-6">
-                                <input nama="judul" type="text" class="form-control" name="judul" value="{{ old('judul') }}">
+                                <input name="judul" type="text" class="form-control" name="judul" value="{{ old('judul') }}">
 
                                 @if ($errors->has('judul'))
                                     <span class="help-block">
@@ -33,7 +33,7 @@
                             <label for="" class="col-md-4 control-label">Image</label>
 
                             <div class="col-md-6">
-                                <input nama="img" type="file" class="form-control" name="img" value="{{ old('img') }}">
+                                <input name="img" type="file" class="form-control" name="img" value="{{ old('img') }}">
 
                                 @if ($errors->has('img'))
                                     <span class="help-block">
@@ -47,7 +47,7 @@
                             <label for="isi" class="col-md-4 control-label">Isi</label>
 
                             <div class="col-md-6">
-                                <textarea nama="isi" type="text" class="form-control" name="isi" value="{{ old('isi') }}"></textarea> 
+                                <textarea name="isi" type="text" class="form-control" name="isi">{{ old('isi') }}</textarea> 
 
                                 @if ($errors->has('isi'))
                                     <span class="help-block">

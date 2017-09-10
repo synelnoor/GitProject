@@ -23,8 +23,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Profil<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Sambutan</a></li>
-            <li><a href="#">Visi dan Misi</a></li>
+            <li><a href="{{url('/sambutan')}}">Sambutan</a></li>
+            <li><a href="{{url('/visimisi')}}">Visi dan Misi</a></li>
             <li><a href="#">Organisasi</a></li>
             <li><a href="#">Pimpinan</a></li>
             <li><a href="#">SDM</a></li>
