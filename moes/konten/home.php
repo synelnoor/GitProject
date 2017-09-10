@@ -8,8 +8,8 @@
   $batas  = 3;
   $posisi = ($hal-1) * $batas ;
   
-  $artikel = mysql_query("select * from artikel order by id_artikel desc limit $posisi, $batas");
-  while($data=mysql_fetch_array($artikel)){
+  $artikel = mysqli_query("select * from artikel order by id_artikel desc limit $posisi, $batas");
+  while($data=mysqli_fetch_array($artikel)){
     $isi = substr($data['isi'],0,200);
     $isi = substr($data['isi'],0,strrpos($isi," "));
 ?>
